@@ -27,6 +27,8 @@ class LoginUtility: NSObject {
             UserDefaults.standard.set(dataUtente, forKey: ChiaveUtenteConnesso)
             
             UserDefaults.standard.synchronize()
+        }else{
+            UserDefaults.standard.removeObject(forKey: ChiaveUtenteConnesso)
         }
         
         
