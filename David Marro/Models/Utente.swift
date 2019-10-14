@@ -10,7 +10,13 @@ import UIKit
 
 // classe che definisce le proprietà e le azioni dell'entità "Utente" dentro la nostra App.
 
-class Utente: NSObject {
+class Utente : NSObject, NSCoding {
+    
+
+    
+    
+    var authToken: String?  // aggiunto da Postman
+    
     
     var id: Int?
     
@@ -19,7 +25,48 @@ class Utente: NSObject {
     
     var email: String?
     var password: String?
-    var dataNascita: String?
+    var dataNascita: String?    // Postman
     var avatarUrl: String?
-    var citta: String?
+    var citta: String?           // Postman
+    var credito : Double?        // Postman
+    
+    
+//    MARK: - Protocollo Coding
+//    Permette di inizializzare un oggetto "Utente" anche senza un codificatore
+    override init() {
+        
+    }
+
+    func encode(with aCoder: NSCoder) {
+//        Codifica
+        aCoder.encode(id, forKey: "id")
+        aCoder.encode(authToken, forKey: "authToken")
+        aCoder.encode(nome, forKey: "nome")
+        aCoder.encode(cognome, forKey: "cognome")
+        aCoder.encode(email, forKey: "email")
+        aCoder.encode(password, forKey: "password")
+        aCoder.encode(dataNascita, forKey: "dataNascita")
+        aCoder.encode(citta, forKey: "citta")
+        aCoder.encode(credito, forKey: "credito")
+        
+        
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        id = aDecoder.decodeObject(forKey: "id") as? Int
+        authToken = aDecoder.decodeObject(forKey: "authToken") as? String
+        nome = aDecoder.decodeObject(forKey: "nome") as? String
+        cognome = aDecoder.decodeObject(forKey: "cognome") as? String
+        email = aDecoder.decodeObject(forKey: "email") as? String
+        password = aDecoder.decodeObject(forKey: "password") as? String
+        avatarUrl = aDecoder.decodeObject(forKey: "avatarUrl") as? String
+        dataNascita = aDecoder.decodeObject(forKey: "dataNascita") as? String
+        citta = aDecoder.decodeObject(forKey: "citta") as? String
+        credito = aDecoder.decodeObject(forKey: "credito") as? Double
+    }
+    
 }
+
+    
+    
+

@@ -18,7 +18,7 @@ class SplashController: UIViewController {
         Database.creaEventiDiProva()
 
         // Do any additional setup after loading the view.
-        
+        LoginUtility.carica()
         //controllare se c'è un utente connesso
         
         if LoginUtility.utenteConnesso == nil{

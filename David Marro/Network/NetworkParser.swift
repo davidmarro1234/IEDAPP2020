@@ -42,8 +42,13 @@ class NetworkParser {
             utente.cognome = data["cognome"] as? String
             utente.avatarUrl = data["avatar_url"] as? String
             utente.citta = data["citta"] as? String
-             utente.dataNascita = data["data_nascita"] as? String
-        
+            utente.dataNascita = data["data_nascita"] as? String
+            utente.id = data["id_utente"] as? Int
+            utente.authToken = data["auth_token"] as? String
+            
+            if let credito = data["credito"] as? Double{
+                utente.credito = credito / 100.0
+            }
             
         
         return utente

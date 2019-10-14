@@ -102,6 +102,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
                 
                 print("Login riuscitooo!!")
                 LoginUtility.utenteConnesso = utente
+                LoginUtility.salva()
                 
                 self.performSegue(withIdentifier: "vaiAllaHome", sender: self)
             }else{
