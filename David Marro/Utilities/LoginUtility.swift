@@ -26,12 +26,12 @@ class LoginUtility: NSObject {
             
             UserDefaults.standard.set(dataUtente, forKey: ChiaveUtenteConnesso)
             
-            UserDefaults.standard.synchronize()
         }else{
             UserDefaults.standard.removeObject(forKey: ChiaveUtenteConnesso)
         }
         
-        
+        UserDefaults.standard.synchronize()
+
     }
     static func carica(){
         let oggettoSalvato = UserDefaults.standard.object(forKey: ChiaveUtenteConnesso)

@@ -48,11 +48,12 @@ class Utente : NSObject, NSCoding {
         aCoder.encode(dataNascita, forKey: "dataNascita")
         aCoder.encode(citta, forKey: "citta")
         aCoder.encode(credito, forKey: "credito")
-        
+        aCoder.encode(avatarUrl,forKey: "avatarUrl")
         
     }
 
     required init?(coder aDecoder: NSCoder) {
+        // Decodifica
         id = aDecoder.decodeObject(forKey: "id") as? Int
         authToken = aDecoder.decodeObject(forKey: "authToken") as? String
         nome = aDecoder.decodeObject(forKey: "nome") as? String

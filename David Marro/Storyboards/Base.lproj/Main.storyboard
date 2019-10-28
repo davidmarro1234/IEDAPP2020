@@ -205,7 +205,7 @@
                         <outlet property="buttonIndietro" destination="S5J-gP-CZf" id="Srw-e6-2bH"/>
                         <outlet property="textEmail" destination="atD-2H-WJg" id="XvN-gF-86R"/>
                         <outlet property="textPassword" destination="MMo-ge-rff" id="4yB-ub-k3O"/>
-                        <segue destination="d6S-V3-Osm" kind="modal" identifier="vaiAllaHome" animates="NO" id="mi5-zZ-qYJ"/>
+                        <segue destination="d6S-V3-Osm" kind="modal" identifier="vaiAllaHome" animates="NO" modalPresentationStyle="fullScreen" id="mi5-zZ-qYJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -693,73 +693,75 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Fs-1o-sY0">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
-                                        <color key="backgroundColor" red="0.29411764709999999" green="0.89019607840000003" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUz-77-e0N">
+                                        <rect key="frame" x="137.5" y="100" width="100" height="100"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonModificaAvatar:" destination="wrU-YN-dBn" eventType="touchUpInside" id="ehl-Q0-SC6"/>
+                                        </connections>
+                                    </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ROK-VV-y3W">
                                         <rect key="frame" x="137.5" y="100" width="100" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="63B-6Z-663"/>
-                                            <constraint firstAttribute="height" constant="100" id="CyX-lf-FSx"/>
+                                            <constraint firstAttribute="width" constant="100" id="4E2-md-BsK"/>
+                                            <constraint firstAttribute="height" constant="100" id="CEt-89-2F0"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="1Fs-1o-sY0" firstAttribute="leading" secondItem="Dyt-Vt-Sjf" secondAttribute="leading" id="3U6-qQ-nz8"/>
-                                    <constraint firstItem="ROK-VV-y3W" firstAttribute="centerX" secondItem="Dyt-Vt-Sjf" secondAttribute="centerX" id="Aob-c4-26V"/>
-                                    <constraint firstAttribute="trailing" secondItem="1Fs-1o-sY0" secondAttribute="trailing" id="NOD-Ga-glh"/>
+                                    <constraint firstItem="DUz-77-e0N" firstAttribute="height" secondItem="ROK-VV-y3W" secondAttribute="height" id="265-fo-z4g"/>
+                                    <constraint firstItem="ROK-VV-y3W" firstAttribute="centerY" secondItem="Dyt-Vt-Sjf" secondAttribute="centerY" id="5zZ-Qm-mRX"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Fs-1o-sY0" secondAttribute="bottom" id="6TV-kh-mJV"/>
+                                    <constraint firstItem="1Fs-1o-sY0" firstAttribute="top" secondItem="Dyt-Vt-Sjf" secondAttribute="top" id="8fU-Db-pPI"/>
+                                    <constraint firstItem="DUz-77-e0N" firstAttribute="centerY" secondItem="ROK-VV-y3W" secondAttribute="centerY" id="DDU-d3-Iwy"/>
                                     <constraint firstAttribute="height" constant="300" id="PHx-S4-o73"/>
-                                    <constraint firstItem="ROK-VV-y3W" firstAttribute="centerY" secondItem="Dyt-Vt-Sjf" secondAttribute="centerY" id="RD8-t9-bfK"/>
-                                    <constraint firstAttribute="bottom" secondItem="1Fs-1o-sY0" secondAttribute="bottom" id="RLH-yq-oKW"/>
-                                    <constraint firstItem="1Fs-1o-sY0" firstAttribute="top" secondItem="Dyt-Vt-Sjf" secondAttribute="top" id="zHh-ag-kc0"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Fs-1o-sY0" secondAttribute="trailing" id="QLa-oZ-HrS"/>
+                                    <constraint firstItem="DUz-77-e0N" firstAttribute="width" secondItem="ROK-VV-y3W" secondAttribute="width" id="bce-m8-Hh2"/>
+                                    <constraint firstItem="ROK-VV-y3W" firstAttribute="centerX" secondItem="Dyt-Vt-Sjf" secondAttribute="centerX" id="f3p-l4-XJ8"/>
+                                    <constraint firstItem="1Fs-1o-sY0" firstAttribute="leading" secondItem="Dyt-Vt-Sjf" secondAttribute="leading" id="lxH-yE-rUc"/>
+                                    <constraint firstItem="DUz-77-e0N" firstAttribute="centerX" secondItem="ROK-VV-y3W" secondAttribute="centerX" id="qNb-tS-dW2"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBr-5Y-HLx">
                                 <rect key="frame" x="0.0" y="300" width="375" height="318"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="labelCitta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hut-6f-4Y3">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelCitta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hut-6f-4Y3">
                                         <rect key="frame" x="20" y="123" width="335" height="24"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="labelNascita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5G-is-NBI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelNascita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5G-is-NBI">
                                         <rect key="frame" x="20" y="91" width="335" height="24"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="labelCognome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1Z-5g-WAd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelCognome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1Z-5g-WAd">
                                         <rect key="frame" x="20" y="54" width="335" height="29"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="labelNome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pj-lH-eND">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelNome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pj-lH-eND">
                                         <rect key="frame" x="20" y="20" width="335" height="29"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neE-y1-RC5">
-                                        <rect key="frame" x="163" y="226" width="48" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Logout"/>
-                                        <connections>
-                                            <action selector="logoutPressed:" destination="wrU-YN-dBn" eventType="touchUpInside" id="hQY-2w-puS"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="hut-6f-4Y3" firstAttribute="top" secondItem="O5G-is-NBI" secondAttribute="bottom" constant="8" id="1j2-Zt-SGb"/>
                                     <constraint firstItem="A1Z-5g-WAd" firstAttribute="top" secondItem="6pj-lH-eND" secondAttribute="bottom" constant="5" id="4Ku-Fw-7vI"/>
-                                    <constraint firstItem="hut-6f-4Y3" firstAttribute="top" secondItem="O5G-is-NBI" secondAttribute="bottom" constant="8" id="6Kn-jv-wJ8"/>
                                     <constraint firstItem="A1Z-5g-WAd" firstAttribute="leading" secondItem="aBr-5Y-HLx" secondAttribute="leading" constant="20" id="6Zl-6O-3NU"/>
                                     <constraint firstItem="O5G-is-NBI" firstAttribute="leading" secondItem="aBr-5Y-HLx" secondAttribute="leading" constant="20" id="9OQ-BE-5fx"/>
                                     <constraint firstAttribute="trailing" secondItem="6pj-lH-eND" secondAttribute="trailing" constant="20" id="CaX-t7-Sm9"/>
                                     <constraint firstItem="6pj-lH-eND" firstAttribute="leading" secondItem="aBr-5Y-HLx" secondAttribute="leading" constant="20" id="E26-UY-fwS"/>
                                     <constraint firstAttribute="trailing" secondItem="O5G-is-NBI" secondAttribute="trailing" constant="20" id="Ls0-7q-eec"/>
-                                    <constraint firstAttribute="bottom" secondItem="hut-6f-4Y3" secondAttribute="bottom" constant="151" id="Paa-hg-aiT"/>
                                     <constraint firstAttribute="trailing" secondItem="hut-6f-4Y3" secondAttribute="trailing" constant="20" id="bjM-cG-KtZ"/>
                                     <constraint firstAttribute="trailing" secondItem="A1Z-5g-WAd" secondAttribute="trailing" constant="20" id="foH-rw-Xm4"/>
                                     <constraint firstItem="6pj-lH-eND" firstAttribute="top" secondItem="aBr-5Y-HLx" secondAttribute="top" constant="20" id="jt9-7Y-7Lt"/>
@@ -780,7 +782,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fA3-y9-Rd9"/>
                     </view>
-                    <navigationItem key="navigationItem" id="O2t-be-G2i"/>
+                    <navigationItem key="navigationItem" id="O2t-be-G2i">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="rgN-60-5ab">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="neE-y1-RC5">
+                                <rect key="frame" x="311" y="7" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="wrU-YN-dBn" eventType="touchUpInside" id="hQY-2w-puS"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="fotoProfilo" destination="ROK-VV-y3W" id="IhI-e1-9Ey"/>
                         <outlet property="labelCitta" destination="hut-6f-4Y3" id="gAD-Gl-xAw"/>
@@ -1011,8 +1024,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yay-qg-ZF7"/>
                     <connections>
-                        <segue destination="0xB-6l-Ltc" kind="show" identifier="vaiAlLogin" id="hTl-uQ-qcR"/>
-                        <segue destination="d6S-V3-Osm" kind="show" identifier="VaiAllaHome" animates="NO" id="pAe-jR-YqJ"/>
+                        <segue destination="0xB-6l-Ltc" kind="show" identifier="vaiAlLogin" animates="NO" id="hTl-uQ-qcR"/>
+                        <segue destination="d6S-V3-Osm" kind="presentation" identifier="VaiAllaHome" animates="NO" modalPresentationStyle="fullScreen" id="pAe-jR-YqJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAv-mM-MVW" userLabel="First Responder" sceneMemberID="firstResponder"/>

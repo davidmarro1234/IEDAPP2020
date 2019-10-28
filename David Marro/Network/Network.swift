@@ -115,5 +115,32 @@ class Network {
             
         }
     }
+    
+    
+//    typealias CompletionLogin = utente -> Void
+//     MARK: - Modifica Avatar
+    typealias CompletionModificaAvatar = ((Bool) -> Void)
+    
+    static func richiestaModificaAvatarUtenteConnesso(nuovoAvatar: UIImage, completion: CompletionModificaAvatar?){
+        
+        let url = "http://ied.apptoyou.it/app/modifica_avatar.php"
+        let dataAvatar = nuovoAvatar.jpegData(compressionQuality: 1.0)!
+        let fileAvatar = IEDNetworkingMultipartFile.init(parameter: "avatar", name: "avatar.jpg", mimeType: "image/jpg", data: dataAvatar)
+//        prendo il token dell utente connesso
+        let authToken = LoginUtility.utenteConnesso?.authToken
+        
+        
+        IEDNetworking.jsonMultipartPost(url: url, authToken: authToken , parameters: nil, multipartFiles: [fileAvatar]) { (response) in
+            
+//            controllo se la richiesta è andata a buon fine
+            if response.success {
+                completion?(true)
+            }else{
+                completion?(false)
+            }
+            
+        }
+        
+    }
 
 }
