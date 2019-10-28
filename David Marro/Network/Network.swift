@@ -143,4 +143,36 @@ class Network {
         
     }
 
+//    MARK- Utente connesso
+    
+    typealias CompletionUtente = ((Utente?) -> Void)
+    
+    static func richiestaUtenteConnesso(completion: CompletionUtente?){
+// Fare in modo che all apertura della schermata del profilo dell utente connesso, venga stampato l indirizzo corretto avatar_url sulla console
+        let url = "http://ied.apptoyou.it/app/utente.php"
+        let authToken = LoginUtility.utenteConnesso?.authToken
+
+        IEDNetworking.jsonGet(url: url, authToken: authToken, parameters: nil) { (response) in
+            print(response)
+                if let data = response.data as? IEDDictionary{
+                    if let datiUtente = data["data"] as? IEDDictionary{
+//                            login Riuscito
+                        let utente = NetworkParser.parseUtente(conData: datiUtente)
+                        
+//                            restituisco l oggetto alla funzione chiamante
+                        
+                        completion?(utente)
+                        
+                        return
+                    }
+        }
+        
+        
+    }
+//        Richiesta fallita
+        completion?(nil)
+
+
+}
+
 }

@@ -33,7 +33,8 @@ class UtenteController: UIViewController,UIImagePickerControllerDelegate,UINavig
         
 //        fotoProfilo.layer.cornerRadius = 60.0
 //        fotoProfilo.clipsToBounds = true
-
+        aggiornaInfoUtenteConnesso()
+       
         
     }
 
@@ -152,4 +153,14 @@ class UtenteController: UIViewController,UIImagePickerControllerDelegate,UINavig
     }
 
 }
+    private func aggiornaInfoUtenteConnesso(){
+//        Chiedo le info aggiornate al Server
+        Network.richiestaUtenteConnesso { (utenteAggiornato) in
+            print(utenteAggiornato?.avatarUrl)
+            print(utenteAggiornato)
+        }
+    }
+    
+    
+    
 }
