@@ -22,20 +22,43 @@ class UtenteController: UIViewController,UIImagePickerControllerDelegate,UINavig
     
     
     override func viewDidLoad() {
-        UIUtility.arrotondaAngoliCerchio(fotoProfilo)
-        labelNome.text =  LoginUtility.utenteConnesso?.nome
+//        viene richiamata solo la prima volta
+        navigationItem.title = "Profilo Utente"
         
-        NetworkUtility.downloadImmagine(indirizzoWeb: LoginUtility.utenteConnesso?.avatarUrl, perImageView: fotoProfilo)
         
-        labelCognome.text = LoginUtility.utenteConnesso?.cognome
-        labelCitta.text = LoginUtility.utenteConnesso?.citta
-        labelNascita.text = LoginUtility.utenteConnesso?.dataNascita
         
-//        fotoProfilo.layer.cornerRadius = 60.0
-//        fotoProfilo.clipsToBounds = true
-        aggiornaInfoUtenteConnesso()
+        
        
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+//        viene richiamata ogni volta
+        super.viewDidAppear(animated)
+        if let utenteConnesso = LoginUtility.utenteConnesso{
+            
+            
+            
+          configuraSchermata(conUtente: utenteConnesso)
+          aggiornaInfoUtenteConnesso()
+        }
+    }
+    
+    
+    private func configuraSchermata(conUtente: Utente){
+     
+                UIUtility.arrotondaAngoliCerchio(fotoProfilo)
+                labelNome.text =  LoginUtility.utenteConnesso?.nome
+        
+                NetworkUtility.downloadImmagine(indirizzoWeb: LoginUtility.utenteConnesso?.avatarUrl, perImageView: fotoProfilo)
+        
+                labelCognome.text = LoginUtility.utenteConnesso?.cognome
+                labelCitta.text = LoginUtility.utenteConnesso?.citta
+                labelNascita.text = LoginUtility.utenteConnesso?.dataNascita
+        
+                fotoProfilo.layer.cornerRadius = 60.0
+                fotoProfilo.clipsToBounds = true
+
     }
 
     @IBAction func buttonModificaAvatar(_ sender: Any) {
@@ -156,10 +179,25 @@ class UtenteController: UIViewController,UIImagePickerControllerDelegate,UINavig
     private func aggiornaInfoUtenteConnesso(){
 //        Chiedo le info aggiornate al Server
         Network.richiestaUtenteConnesso { (utenteAggiornato) in
-            print(utenteAggiornato?.avatarUrl)
-            print(utenteAggiornato)
+//            print(utenteAggiornato?.avatarUrl)
+//            print(utenteAggiornato)
+//            controllo se il server ha risposto correttamente
+            if let utente = utenteAggiornato {
+//                Faccio backup Auth token utente
+                utente.authToken = LoginUtility.utenteConnesso?.authToken
+//            1 Salvare l utente aggiornato sul database
+                LoginUtility.utenteConnesso = utente
+                LoginUtility.salva()
+//            2 Caricare sulla schermata
+                self.configuraSchermata(conUtente: utente)
+                
+                
+            }
+            
         }
     }
+    
+    
     
     
     
