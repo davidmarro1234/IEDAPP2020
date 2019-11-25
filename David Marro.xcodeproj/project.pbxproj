@@ -13,6 +13,8 @@
 		235D9F112292FE0800D46EB6 /* MappaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235D9F102292FE0800D46EB6 /* MappaController.swift */; };
 		235D9F132293033C00D46EB6 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235D9F122293033C00D46EB6 /* Database.swift */; };
 		235D9F152293075D00D46EB6 /* PinMappa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235D9F142293075D00D46EB6 /* PinMappa.swift */; };
+		2370F434238C2A58009D5F73 /* Utente.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2370F433238C2A58009D5F73 /* Utente.storyboard */; };
+		2370F439238C3868009D5F73 /* ModificaProfiloController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2370F438238C3868009D5F73 /* ModificaProfiloController.swift */; };
 		2375C69422C149730085B62E /* UtenteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2375C69322C149730085B62E /* UtenteController.swift */; };
 		237FC11E22AE91F7003F25C7 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FC11D22AE91F7003F25C7 /* Network.swift */; };
 		237FC12022AEA6F7003F25C7 /* Meteo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FC11F22AEA6F7003F25C7 /* Meteo.swift */; };
@@ -54,6 +56,8 @@
 		235D9F102292FE0800D46EB6 /* MappaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappaController.swift; sourceTree = "<group>"; };
 		235D9F122293033C00D46EB6 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		235D9F142293075D00D46EB6 /* PinMappa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinMappa.swift; sourceTree = "<group>"; };
+		2370F433238C2A58009D5F73 /* Utente.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utente.storyboard; sourceTree = "<group>"; };
+		2370F438238C3868009D5F73 /* ModificaProfiloController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificaProfiloController.swift; sourceTree = "<group>"; };
 		2375C69322C149730085B62E /* UtenteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtenteController.swift; sourceTree = "<group>"; };
 		237FC11D22AE91F7003F25C7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		237FC11F22AEA6F7003F25C7 /* Meteo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meteo.swift; sourceTree = "<group>"; };
@@ -93,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2370F435238C3811009D5F73 /* Utente */ = {
+			isa = PBXGroup;
+			children = (
+				2370F438238C3868009D5F73 /* ModificaProfiloController.swift */,
+			);
+			name = Utente;
+			path = "Utenteù";
+			sourceTree = "<group>";
+		};
 		238A3F08229C3DB5009A91B6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +119,7 @@
 		23B381972289BB03005722FF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2370F435238C3811009D5F73 /* Utente */,
 				23F569F8225B86F000666905 /* SplashController.swift */,
 				2375C69322C149730085B62E /* UtenteController.swift */,
 				231129152252644C00D0546A /* LoginController.swift */,
@@ -160,6 +174,7 @@
 			children = (
 				23E0EED022524D25004C4C45 /* Main.storyboard */,
 				23E0EED522524D26004C4C45 /* LaunchScreen.storyboard */,
+				2370F433238C2A58009D5F73 /* Utente.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -275,6 +290,7 @@
 			files = (
 				239370002292F9F500D6DE18 /* LaunchScreen.storyboard in Resources */,
 				23EB16E422B8065D00A522AD /* service-bell_daniel_simion.wav in Resources */,
+				2370F434238C2A58009D5F73 /* Utente.storyboard in Resources */,
 				23E0EED422524D26004C4C45 /* Assets.xcassets in Resources */,
 				23936FFF2292F9F500D6DE18 /* Main.storyboard in Resources */,
 			);
@@ -309,6 +325,7 @@
 				239370082292FA0200D6DE18 /* Evento.swift in Sources */,
 				239370042292F9FD00D6DE18 /* DettaglioEventoController.swift in Sources */,
 				239370012292F9FD00D6DE18 /* SplashController.swift in Sources */,
+				2370F439238C3868009D5F73 /* ModificaProfiloController.swift in Sources */,
 				235D9F152293075D00D46EB6 /* PinMappa.swift in Sources */,
 				235D9F132293033C00D46EB6 /* Database.swift in Sources */,
 				23936FFB2292F9EA00D6DE18 /* dateUtility.swift in Sources */,

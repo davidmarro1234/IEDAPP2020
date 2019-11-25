@@ -174,5 +174,13 @@ class Network {
 
 
 }
+    
+        static func richiestaModificaUtente(_ utente: Utente, completion: CompletionUtente?){
+    //        codice
+//            la richiesta  è una json put su questo indirizzo
+//            http://ied.apptoyou.it/app/utente.php
+            
+//            vanno passati al servere i parametri dei campi da modificare
+        }
 
 }

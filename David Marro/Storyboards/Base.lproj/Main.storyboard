@@ -726,7 +726,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBr-5Y-HLx">
-                                <rect key="frame" x="0.0" y="300" width="375" height="318"/>
+                                <rect key="frame" x="0.0" y="300" width="375" height="269"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelCitta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hut-6f-4Y3">
                                         <rect key="frame" x="20" y="123" width="335" height="24"/>
@@ -752,6 +752,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kln-sJ-6Jh">
+                                        <rect key="frame" x="14" y="155" width="59" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Modifica"/>
+                                        <connections>
+                                            <segue destination="Cpx-lc-S9i" kind="presentation" id="ZF7-Xe-ZE2"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -782,6 +790,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fA3-y9-Rd9"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="O2t-be-G2i">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="rgN-60-5ab">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="neE-y1-RC5">
@@ -794,6 +803,7 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="fotoProfilo" destination="ROK-VV-y3W" id="IhI-e1-9Ey"/>
                         <outlet property="labelCitta" destination="hut-6f-4Y3" id="gAD-Gl-xAw"/>
@@ -806,6 +816,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njw-t5-sA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4464.8000000000002" y="1024.1379310344828"/>
+        </scene>
+        <!--NavigationModificaProfilo-->
+        <scene sceneID="SmF-GA-o6j">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Utente" referencedIdentifier="NavigationModificaProfilo" id="Cpx-lc-S9i" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WhH-xK-Uzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5162" y="778"/>
         </scene>
         <!--Home Controller-->
         <scene sceneID="ajZ-7a-3Ng">
