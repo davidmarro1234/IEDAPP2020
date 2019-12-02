@@ -11,7 +11,7 @@
         <!--Modifica Profilo Controller-->
         <scene sceneID="wGG-ab-bKm">
             <objects>
-                <viewController storyboardIdentifier="ModificaProfiloController" id="gck-lU-Yje" customClass="ModificaProfiloController" customModule="David_Marro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ModificaProfiloController" modalPresentationStyle="fullScreen" id="gck-lU-Yje" customClass="ModificaProfiloController" customModule="David_Marro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zma-H8-0Wu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

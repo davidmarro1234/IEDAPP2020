@@ -178,9 +178,26 @@ class Network {
         static func richiestaModificaUtente(_ utente: Utente, completion: CompletionUtente?){
     //        codice
 //            la richiesta  è una json put su questo indirizzo
-//            http://ied.apptoyou.it/app/utente.php
+//
+            let url = "http://ied.apptoyou.it/app/modifica_utente.php"
+            let authToken = LoginUtility.utenteConnesso?.authToken
+            var parameters = IEDDictionary()
+//            parameters["_method"] = "PUT"
+            parameters["nome"]=utente.nome
+            parameters["cognome"]=utente.cognome
+            parameters["citta"]=utente.citta
+            parameters["data_nascita"]=utente.dataNascita
+            IEDNetworking.jsonPost(url: url, authToken: authToken, parameters: parameters) { (response) in
+                if response.success {
+                    
+                    completion?(utente)
+                }else{
+//                    completion?(false)
+                }
+              
             
 //            vanno passati al servere i parametri dei campi da modificare
         }
 
+}
 }

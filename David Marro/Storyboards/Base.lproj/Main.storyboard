@@ -757,7 +757,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Modifica"/>
                                         <connections>
-                                            <segue destination="Cpx-lc-S9i" kind="presentation" id="ZF7-Xe-ZE2"/>
+                                            <segue destination="Cpx-lc-S9i" kind="modal" modalPresentationStyle="fullScreen" id="ZF7-Xe-ZE2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -820,7 +820,9 @@
         <!--NavigationModificaProfilo-->
         <scene sceneID="SmF-GA-o6j">
             <objects>
-                <viewControllerPlaceholder storyboardName="Utente" referencedIdentifier="NavigationModificaProfilo" id="Cpx-lc-S9i" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Utente" referencedIdentifier="NavigationModificaProfilo" id="Cpx-lc-S9i" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qDh-8V-0f2"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhH-xK-Uzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5162" y="778"/>

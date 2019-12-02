@@ -182,6 +182,7 @@ class UtenteController: UIViewController,UIImagePickerControllerDelegate,UINavig
 //            print(utenteAggiornato?.avatarUrl)
 //            print(utenteAggiornato)
 //            controllo se il server ha risposto correttamente
+            
             if let utente = utenteAggiornato {
 //                Faccio backup Auth token utente
                 utente.authToken = LoginUtility.utenteConnesso?.authToken
@@ -196,9 +197,6 @@ class UtenteController: UIViewController,UIImagePickerControllerDelegate,UINavig
             
         }
     }
-    
-    
-    
     
     
 }

@@ -62,6 +62,25 @@ class MainTabBarController: UITabBarController {
             }
             
             
+            let storyboardAr = UIStoryboard.init(name: "AR", bundle: nil)
+            let controllerAR = storyboardAr.instantiateViewController(withIdentifier: "NavigationARCamera")
+            //            AR Camera
+
+            viewControllers?.append(controllerAR)
+            let itemAR = UITabBarItem()
+            controllerAR.tabBarItem = itemAR
+            
+            itemAR.title = "Camera"
+            
+            
+//            controllerAR.tabBarItem = UITabBarItem()
+            let imageAR = UIImage.init(named: "ar")
+            itemAR.image = UIUtility.resizeImage(imageAR, targetSize: dimensioneIcone)
+
+            
+
+            
+            
         }
         
         

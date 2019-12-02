@@ -41,6 +41,11 @@ class IEDNetworking {
         jsonRequest(url: url, requestType: "post", authToken: authToken, parameters: parameters, multipartFiles: nil, completion: completion)
     }
     
+    static func jsonPut(url: String, authToken: String?, parameters: [String: Any]?, completion: IEDNetworkingCompletion?) {
+        jsonRequest(url: url, requestType: "put", authToken: authToken, parameters: parameters, multipartFiles: nil, completion: completion)
+    }
+
+    
     /// Effettua una chiamata web di tipo "multipart POST" nel formato JSON
     static func jsonMultipartPost(url: String, authToken: String?, parameters: [String: Any]?, multipartFiles: [IEDNetworkingMultipartFile]?, completion: IEDNetworkingCompletion?) {
         jsonRequest(url: url, requestType: "post", authToken: authToken, parameters: parameters, multipartFiles: multipartFiles, completion: completion)

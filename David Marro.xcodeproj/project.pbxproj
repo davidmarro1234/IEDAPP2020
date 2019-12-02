@@ -13,6 +13,10 @@
 		235D9F112292FE0800D46EB6 /* MappaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235D9F102292FE0800D46EB6 /* MappaController.swift */; };
 		235D9F132293033C00D46EB6 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235D9F122293033C00D46EB6 /* Database.swift */; };
 		235D9F152293075D00D46EB6 /* PinMappa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235D9F142293075D00D46EB6 /* PinMappa.swift */; };
+		2367F7E02395777D00859171 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2367F7DF2395777D00859171 /* ARKit.framework */; };
+		2367F7E22395778400859171 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2367F7E12395778400859171 /* SceneKit.framework */; };
+		2367F7E4239577F200859171 /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2367F7E3239577F200859171 /* AR.storyboard */; };
+		2367F7E92395817300859171 /* ARCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367F7E82395817300859171 /* ARCameraController.swift */; };
 		2370F434238C2A58009D5F73 /* Utente.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2370F433238C2A58009D5F73 /* Utente.storyboard */; };
 		2370F439238C3868009D5F73 /* ModificaProfiloController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2370F438238C3868009D5F73 /* ModificaProfiloController.swift */; };
 		2375C69422C149730085B62E /* UtenteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2375C69322C149730085B62E /* UtenteController.swift */; };
@@ -56,6 +60,10 @@
 		235D9F102292FE0800D46EB6 /* MappaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappaController.swift; sourceTree = "<group>"; };
 		235D9F122293033C00D46EB6 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		235D9F142293075D00D46EB6 /* PinMappa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinMappa.swift; sourceTree = "<group>"; };
+		2367F7DF2395777D00859171 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		2367F7E12395778400859171 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		2367F7E3239577F200859171 /* AR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
+		2367F7E82395817300859171 /* ARCameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARCameraController.swift; sourceTree = "<group>"; };
 		2370F433238C2A58009D5F73 /* Utente.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utente.storyboard; sourceTree = "<group>"; };
 		2370F438238C3868009D5F73 /* ModificaProfiloController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificaProfiloController.swift; sourceTree = "<group>"; };
 		2375C69322C149730085B62E /* UtenteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtenteController.swift; sourceTree = "<group>"; };
@@ -91,12 +99,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2367F7E22395778400859171 /* SceneKit.framework in Frameworks */,
+				2367F7E02395777D00859171 /* ARKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2367F7DE2395777D00859171 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2367F7E12395778400859171 /* SceneKit.framework */,
+				2367F7DF2395777D00859171 /* ARKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2367F7E72395795300859171 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				2367F7E82395817300859171 /* ARCameraController.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
 		2370F435238C3811009D5F73 /* Utente */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +150,7 @@
 				23F569F8225B86F000666905 /* SplashController.swift */,
 				2375C69322C149730085B62E /* UtenteController.swift */,
 				231129152252644C00D0546A /* LoginController.swift */,
+				2367F7E72395795300859171 /* AR */,
 				235D9F0C2292FAA400D46EB6 /* MainTabBarController.swift */,
 				23F569FE225B9DDA00666905 /* HomeController.swift */,
 				23434402228087AF0091AC03 /* DettaglioEventoController.swift */,
@@ -173,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				23E0EED022524D25004C4C45 /* Main.storyboard */,
+				2367F7E3239577F200859171 /* AR.storyboard */,
 				23E0EED522524D26004C4C45 /* LaunchScreen.storyboard */,
 				2370F433238C2A58009D5F73 /* Utente.storyboard */,
 			);
@@ -184,6 +213,7 @@
 			children = (
 				23E0EECB22524D25004C4C45 /* David Marro */,
 				23E0EECA22524D25004C4C45 /* Products */,
+				2367F7DE2395777D00859171 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -293,6 +323,7 @@
 				2370F434238C2A58009D5F73 /* Utente.storyboard in Resources */,
 				23E0EED422524D26004C4C45 /* Assets.xcassets in Resources */,
 				23936FFF2292F9F500D6DE18 /* Main.storyboard in Resources */,
+				2367F7E4239577F200859171 /* AR.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +353,7 @@
 				2375C69422C149730085B62E /* UtenteController.swift in Sources */,
 				23EB16E722B8073700A522AD /* Sound.swift in Sources */,
 				239370032292F9FD00D6DE18 /* HomeController.swift in Sources */,
+				2367F7E92395817300859171 /* ARCameraController.swift in Sources */,
 				239370082292FA0200D6DE18 /* Evento.swift in Sources */,
 				239370042292F9FD00D6DE18 /* DettaglioEventoController.swift in Sources */,
 				239370012292F9FD00D6DE18 /* SplashController.swift in Sources */,
@@ -481,6 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/David Marro/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,6 +531,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/David Marro/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

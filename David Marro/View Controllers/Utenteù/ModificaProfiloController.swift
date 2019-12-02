@@ -20,7 +20,7 @@ class ModificaProfiloController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "MOdifica Profilo Utente"
+        navigationItem.title = "Modifica Profilo Utente"
         
         let annulla = UIBarButtonItem.init(title: "Annulla", style: .plain, target: self, action: #selector(buttonAnnulla))
         navigationItem.leftBarButtonItem = annulla
@@ -54,12 +54,21 @@ class ModificaProfiloController: UIViewController {
         utente.dataNascita = textData.text
         
         Network.richiestaModificaUtente(utente) { (utenteAggiornato) in
-//           controllo se il server ha risposto correttamente
+            //           controllo se il server ha risposto correttamente
+
+            if let utenteAggiornato = utenteAggiornato{
+                utente.authToken = LoginUtility.utenteConnesso?.authToken
+            
 //            salvo l utente aggiornato sul database
+            LoginUtility.utenteConnesso = utenteAggiornato
+            LoginUtility.salva()
 //            chiudo la schermata di modifica profilo
+            self.dismiss(animated: true)
+        }else{
+                AlertUtility.mostraAlertSemplice(titolo: "Si è verificato un errore!", messaggio: nil, viewController: self)
         }
         }
-        
+    }
     
     
     
@@ -73,3 +82,4 @@ class ModificaProfiloController: UIViewController {
 
 
 }
+
