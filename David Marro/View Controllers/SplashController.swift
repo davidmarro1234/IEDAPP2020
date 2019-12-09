@@ -15,11 +15,12 @@ class SplashController: UIViewController {
         Network.richiestaMeteoRoma()
         
 //        popolo il database
-        Database.creaEventiDiProva()
 
         // Do any additional setup after loading the view.
         LoginUtility.carica()
         //controllare se c'è un utente connesso
+        Database.creaEventiDiProva()
+
         
         if LoginUtility.utenteConnesso == nil{
             // nessun utente connesso

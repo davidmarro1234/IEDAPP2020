@@ -16,6 +16,7 @@ class Evento: OggettoAcquistabile {
     var descrizione: String?
     var indirizzo: String?
     var data: Date?
+    var creatore: Utente?
 
     var coordinate: CLLocationCoordinate2D?
     

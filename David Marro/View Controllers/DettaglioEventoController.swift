@@ -22,10 +22,12 @@ UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var labelCreatore: UILabel!
     var miaPosizione: CLLocation?
     
     @IBOutlet weak var buttonAcquistaBiglietto: UIButton!
     
+    @IBOutlet weak var imgCreatore: UIImageView!
     
     @IBOutlet weak var labelDistanza: UILabel!
     
@@ -76,7 +78,10 @@ UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
         
 //        metto il nome dell evento
         labelNome.text = evento.nome
-        
+        if let creatore = evento.creatore {
+            labelCreatore.text = evento.creatore?.nomeCompleto
+            NetworkUtility.downloadImmagine(indirizzoWeb: evento.creatore?.avatarUrl, perImageView: imgCreatore)
+        }
         labelIndirizzo.text = evento.indirizzo
         
         //        metto la data dell'evento
@@ -180,7 +185,8 @@ UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
         
-        
+        let oggetto = evento?.oggettiAcquistabili?[indexPath.item]
+        chiediConfermaAcquisto(oggetto: oggetto)
 //        2. se  l  utente accetta lo aggiungiamo al carrello
     }
     
@@ -189,6 +195,7 @@ UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
         
         guard let oggetto = oggetto else {
             return
+            
         }
         
         //        1. mostriamo l alert

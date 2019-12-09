@@ -87,7 +87,7 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cella
     }
 //    seleziono l evento per il dettaglio
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let eventoSelezionato = listaEventi[indexPath.row]
         
 //        creo la prossima schermata di dettaglio dell'evento

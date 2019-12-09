@@ -66,6 +66,20 @@ class Utente : NSObject, NSCoding {
         credito = aDecoder.decodeObject(forKey: "credito") as? Double
     }
     
+ }
+extension Utente{
+    var nomeCompleto: String? {
+        if let nome = nome, let cognome = cognome {
+            return nome + " " + cognome
+        } else if let nome = nome{
+            return nome
+        }else if let cognome = cognome{
+            return cognome
+        }
+    
+        return nil
+    
+    }
 }
 
     

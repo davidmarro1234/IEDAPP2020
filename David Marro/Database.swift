@@ -20,6 +20,7 @@ class Database: NSObject {
         uno.descrizione = "Fantastica lezione di App Design"
         uno.data = dateUtility.data(conStringa: "25/05/2019", formato: "dd/MM/yyyy" )
         uno.prezzo = 55.0
+        uno.creatore = LoginUtility.utenteConnesso
         uno.immagineUrl = "https://images.unsplash.com/photo-1553531580-652231dae097?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1026&q=80"
         uno.coordinate = CLLocationCoordinate2D(latitude: 41.8864836, longitude: 12.523872)
         eventi.append(uno)
@@ -28,6 +29,7 @@ class Database: NSObject {
         
         let due = Evento()
         due.coordinate = CLLocationCoordinate2D(latitude: 50.8864836, longitude: 17.523872)
+        due.creatore = LoginUtility.utenteConnesso
 
         due.nome = "Special Lesson"
         due.indirizzo = "Via Alcamo 11,Roma,Italia"
@@ -42,6 +44,7 @@ class Database: NSObject {
         tre.data = dateUtility.data(conStringa: "03/08/2019", formato: "dd/MM/yyyy" )
         tre.prezzo = 30.0
         tre.coordinate = CLLocationCoordinate2D(latitude: 89.8864836, longitude: 12.523872)
+        tre.creatore = LoginUtility.utenteConnesso
 
         tre.immagineUrl = "https://images.unsplash.com/photo-1556793313-2e9460949ddd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
         eventi.append(tre)
