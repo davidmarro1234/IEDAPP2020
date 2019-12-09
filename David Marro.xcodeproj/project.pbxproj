@@ -40,6 +40,7 @@
 		239370062292FA0200D6DE18 /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F569F4225B847600666905 /* Utente.swift */; };
 		239370072292FA0200D6DE18 /* OggettoAcquistabile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BE33D12289A6CF00829559 /* OggettoAcquistabile.swift */; };
 		239370082292FA0200D6DE18 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F569FA225B911800666905 /* Evento.swift */; };
+		23C75351239E99A400433079 /* Oggetto 3D in Resources */ = {isa = PBXBuildFile; fileRef = 23C75350239E99A400433079 /* Oggetto 3D */; };
 		23E0EED422524D26004C4C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E0EED322524D26004C4C45 /* Assets.xcassets */; };
 		23EB16DF22B7DDEB00A522AD /* AlertUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EB16DE22B7DDEB00A522AD /* AlertUtility.swift */; };
 		23EB16E122B7FA8900A522AD /* CartUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EB16E022B7FA8900A522AD /* CartUtility.swift */; };
@@ -74,6 +75,7 @@
 		238A3F09229C3E00009A91B6 /* IEDNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IEDNetworking.swift; sourceTree = "<group>"; };
 		23BE33D12289A6CF00829559 /* OggettoAcquistabile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OggettoAcquistabile.swift; sourceTree = "<group>"; };
 		23BE33D32289A6CF00829559 /* CellOggettoAcquistabileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellOggettoAcquistabileCollectionViewCell.swift; sourceTree = "<group>"; };
+		23C75350239E99A400433079 /* Oggetto 3D */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Oggetto 3D"; sourceTree = "<group>"; };
 		23E0EEC922524D25004C4C45 /* David Marro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "David Marro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E0EECC22524D25004C4C45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23E0EED122524D25004C4C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		23EB16E222B805B500A522AD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				23C75350239E99A400433079 /* Oggetto 3D */,
 				23EB16E322B8065D00A522AD /* service-bell_daniel_simion.wav */,
 			);
 			path = Resources;
@@ -322,6 +325,7 @@
 				23EB16E422B8065D00A522AD /* service-bell_daniel_simion.wav in Resources */,
 				2370F434238C2A58009D5F73 /* Utente.storyboard in Resources */,
 				23E0EED422524D26004C4C45 /* Assets.xcassets in Resources */,
+				23C75351239E99A400433079 /* Oggetto 3D in Resources */,
 				23936FFF2292F9F500D6DE18 /* Main.storyboard in Resources */,
 				2367F7E4239577F200859171 /* AR.storyboard in Resources */,
 			);
@@ -512,6 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q938TNF858;
 				INFOPLIST_FILE = "$(SRCROOT)/David Marro/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -530,6 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q938TNF858;
 				INFOPLIST_FILE = "$(SRCROOT)/David Marro/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
